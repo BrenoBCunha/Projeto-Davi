@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Biblioteca de cartas do Projeto Davi">
+    <link rel="stylesheet" href="css/biblioteca_de_cartas.css">
+    <title>Biblioteca de Cartas | Projeto Davi</title>
+</head>
+<body id="topo">
+    <nav class="nav-fixa" aria-label="Navegação principal">
+        <a class="marca" href="#topo">Projeto Davi</a>
+
+        <ul class="menu-principal">
+            <li><a class="ativo" href="#biblioteca">Cartas</a></li>
+            <li><a href="#montagem-de-deck">Deck Builder</a></li>
+            <li><a href="#meus-decks">Meus Decks</a></li>
+            <li><a href="#campo-de-batalha">Mesa</a></li>
+        </ul>
+    </nav>
+
+    <header class="cabecalho-biblioteca" id="biblioteca">
+        <div class="conteudo-cabecalho">
+            <h1>Biblioteca de Cartas</h1>
+            <p class="subtitulo">Consulte as cartas por cor, custo, tipo e atributos.</p>
+        </div>
+    </header>
+
+    <main>
+        <form action="" method="get" class="filtro-cartas">
+            <fieldset>
+                <legend>Cor</legend>
+                <label class="sr-only" for="cor">Selecione uma cor</label>
+                <select name="cor" id="cor">
+                    <option value="">Todas as cores</option>
+                    <option value="azul">Azul</option>
+                    <option value="branco">Branco</option>
+                    <option value="preto">Preto</option>
+                    <option value="verde">Verde</option>
+                    <option value="vermelho">Vermelho</option>
+                    <option value="multicor">Multicor</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="grupo-mana">
+                <legend>Custo de Mana</legend>
+                <div class="opcoes-mana">
+                    <input type="radio" name="custo_mana" id="mana-todos" value="" checked>
+                    <label for="mana-todos">Todos</label>
+
+                    <input type="radio" name="custo_mana" id="mana-0" value="0">
+                    <label for="mana-0">0</label>
+
+                    <input type="radio" name="custo_mana" id="mana-1" value="1">
+                    <label for="mana-1">1</label>
+
+                    <input type="radio" name="custo_mana" id="mana-2" value="2">
+                    <label for="mana-2">2</label>
+
+                    <input type="radio" name="custo_mana" id="mana-3" value="3">
+                    <label for="mana-3">3</label>
+
+                    <input type="radio" name="custo_mana" id="mana-4" value="4">
+                    <label for="mana-4">4</label>
+
+                    <input type="radio" name="custo_mana" id="mana-5" value="5">
+                    <label for="mana-5">5</label>
+
+                    <input type="radio" name="custo_mana" id="mana-6" value="6">
+                    <label for="mana-6">6</label>
+
+                    <input type="radio" name="custo_mana" id="mana-7" value="7">
+                    <label for="mana-7">7</label>
+
+                    <input type="radio" name="custo_mana" id="mana-8" value="8">
+                    <label for="mana-8">8</label>
+
+                    <input type="radio" name="custo_mana" id="mana-9" value="9">
+                    <label for="mana-9">9</label>
+
+                    <input type="radio" name="custo_mana" id="mana-10" value="10">
+                    <label for="mana-10">10</label>
+
+                    <input type="radio" name="custo_mana" id="mana-10-mais" value="10+">
+                    <label for="mana-10-mais">10+</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="grupo-busca">
+                <legend>Buscar</legend>
+                <label class="sr-only" for="busca">Nome da carta</label>
+                <div class="linha-busca">
+                    <input type="search" name="busca" id="busca" maxlength="30" placeholder="Nome da carta...">
+                    <button type="submit">Buscar</button>
+                </div>
+            </fieldset>
+
+            <fieldset class="grupo-filtros">
+                <legend>Outros filtros</legend>
+
+                <div class="campo-numerico">
+                    <label for="ataque">Ataque</label>
+                    <input type="number" name="ataque" id="ataque" min="0" max="15" placeholder="0">
+                </div>
+
+                <div class="campo-numerico">
+                    <label for="defesa">Defesa</label>
+                    <input type="number" name="defesa" id="defesa" min="0" max="15" placeholder="0">
+                </div>
+
+                <div class="campo-tipo">
+                    <label class="sr-only" for="tipo">Tipo de carta</label>
+                    <select name="tipo" id="tipo">
+                        <option value="">Todos os tipos</option>
+                        <option value="comandante">Comandante</option>
+                        <option value="terreno">Terreno</option>
+                        <option value="criatura">Criatura</option>
+                        <option value="magia">Magia</option>
+                        <option value="arma">Arma</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+
+        <section class="secao-cartas" aria-labelledby="titulo-cartas">
+            <div class="cabecalho-resultados">
+                <div>
+                    <p class="rotulo-secao">Catálogo</p>
+                    <h2 id="titulo-cartas">Todas as cartas</h2>
+                </div>
+                <p class="total-cartas">0 cartas cadastradas</p>
+            </div>
+
+            <div class="grade-cartas">
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/golem de gelo.webp" alt="goelm de gelo">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/fada celeste.webp" alt="fada celeste">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/Orion bot.webp" alt="orion bot">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/punho de aço.webp" alt="punho de aco">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/b-257.webp" alt="b-257">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/aparicao de mago.webp" alt="aparicao de mago">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/urso pardo pelo-de-ferro.webp" alt="urso pardo pelo-de-ferro">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/fênix azul.webp" alt="fenix azul">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/guardiao da floresta.webp" alt="guardiao da floresta">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/rhinotouro.webp" alt="rhinotouro">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/tartaruga de artilharia.webp" alt="tartaruga de artilharia">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/tartaruga recruta.webp" alt="tartaruga recruta">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/crocolisco.webp" alt="crocolisco">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/java-tronco.webp" alt="java-tronco">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/juba-alta da floresta.webp" alt="juba-alta da floresta">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/lilo.webp" alt="lilo">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/lobo-mor.webp" alt="lobo-mor">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/mestre da caçada.webp" alt="mestre da cacada">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/cao de caca.webp" alt="cao de caca">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/companheiro.webp" alt="companheiro">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/estrondo.webp" alt="estrondo">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/rastreio.webp" alt="rastreio">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/soltem os caes.webp" alt="soltem os caes">
+                </article>
+                <article class="carta">
+                        <img src="assests/images/imagem_das_cartas/tiro certeiro.webp" alt="tiro certeiro">
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Seções futuras usadas pelo menu. -->
+        <span id="montagem-de-deck" class="ancora-futura" aria-hidden="true"></span>
+        <span id="meus-decks" class="ancora-futura" aria-hidden="true"></span>
+        <span id="campo-de-batalha" class="ancora-futura" aria-hidden="true"></span>
+    </main>
+
+    <a href="#topo" class="btn-topo" aria-label="Voltar ao topo" title="Voltar ao topo">↑</a>
+</body>
+</html>
